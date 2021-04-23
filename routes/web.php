@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MasterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/Adminpage', function () {
+//Route::get('/', [MasterController::class,'Profile']);
+
+
+/*Route::get('/Adminpage', function () {
     return view('Adminpage.dashbord');
-});
+});*/
+
+
+Route::get('/', [MasterController::class, 'Profile']);
+Route::get('/dashbord', [MasterController::class, 'dashbord']);
+Route::get('/receptionniste', [MasterController::class, 'receptionniste']);
+
+/*Route::get('/', function () {
+    return view('Adminpage.Profile');
+});*/
+
