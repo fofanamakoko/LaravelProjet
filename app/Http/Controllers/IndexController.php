@@ -11,7 +11,7 @@ class IndexController extends Controller
     public function registerUser(Request $request){
 
     //1 - FORM VALIDATION
-    $this->validate($request, [
+   /* $this->validate($request, [
         'email' => 'required|email|unique:users',
         'password' => 'required|confirmed',
         'firstname' => 'required',
@@ -28,7 +28,18 @@ class IndexController extends Controller
 
     ]);
 
-    return redirect()->route('login');
+    return redirect()->route('login');*/
+
+    $user = new User;
+    $user->username=$request->firstname." ".$request->lastname;
+    $user->firstname=$request->firstname;
+    $user->usertype=$request->usertype;
+    $user->lastname=$request->lastname;
+    $user->email=$request->email;
+    $user->password=Hash::make($request->password);
+    $user->save();
+    return redirect('/');
+
 
 
 
@@ -46,8 +57,8 @@ public function login(){
 public function register(){
     return view('register');
 }
-
-
+public function Adminlogin(){
+    return view('Adminlogin');
 }
 
-
+}

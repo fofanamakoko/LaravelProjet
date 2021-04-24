@@ -1,4 +1,4 @@
-@extends('Layouts.masterLayout')
+@extends('Layouts.AdminLayout')
 @section('title')
     Dashbord
 @endsection

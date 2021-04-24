@@ -32,9 +32,14 @@ Register page
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputFonction" name="usertype"
+                                        placeholder="Fonction">
+                                </div>
+                                <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail" name="email"
                                         placeholder="Email Address">
                                 </div>
+
 
 <!--
                                 <div class="form-group">

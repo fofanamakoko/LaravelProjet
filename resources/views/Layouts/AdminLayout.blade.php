@@ -51,38 +51,23 @@
             <div class="sidebar-wrapper" id="sidebar-wrapper">
                 <ul class="nav">
 
- <li @if ( $currentpage == 'home') class="active" @endif>
-                        <a href="{{route('home')}}">
-                            <i class="now-ui-icons design_app"></i>
-                            <p>Home</p>
-                        </a>
-                    </li>
 
 
-
- <li @if ( $currentpage =='receptionniste') class="active" @endif>
-                        <a href="{{route('receptionniste')}}">
-                            <i class="now-ui-icons files_single-copy-04"></i>
-                            <p>Receptionniste</p>
-                        </a>
-                    </li>
-
- <li @if ( $currentpage =='dashbord') class="active" @endif>
-                        <a href="{{route('Adminlogin')}}">
-                            <i class="now-ui-icons  travel_info"></i>
-                            <p>Admin</p>
-                        </a>
-                    </li>
-
- <li @if ( $currentpage == 'Profile') class="active" @endif>
-                    <a href="{{route('Profile')}}">
+                    <li @if ($currentpage == 'registered') class="active" @endif>
+                        <a href="{{ route('registered') }}">
                             <i class="now-ui-icons users_single-02"></i>
                             <p>Profile</p>
                         </a>
                     </li>
+                    <li @if ($currentpage == 'dashbord1') class="active" @endif>
+                        <a href="{{ route('dashbord1') }}">
+                            <i class="now-ui-icons  travel_info"></i>
+                            <p>Dashbord</p>
+                        </a>
+                    </li>
 
                     <li>
-                        <a href="{{route('login')}}">
+                        <a href="{{ route('Adminlogin') }}">
                             <i class="now-ui-icons ui-1_lock-circle-open"></i>
                             <p>Logout</p>
                         </a>
