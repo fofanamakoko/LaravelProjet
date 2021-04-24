@@ -9,11 +9,17 @@ class MasterController extends Controller
     public function Profile(){
         return view('Profile');
     }
+
     public function dashbord(){
         return view('dashbord');
     }
+
     public function receptionniste(){
         return view('receptionniste');
+    }
+
+    public function home(){
+        return view('home');
     }
 
 }

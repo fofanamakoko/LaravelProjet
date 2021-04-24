@@ -51,7 +51,7 @@
             <div class="sidebar-wrapper" id="sidebar-wrapper">
                 <ul class="nav">
                     <li>
-                        <a href="#lien">
+                        <a href="{{route('home')}}">
                             <i class="now-ui-icons design_app"></i>
                             <p>Home</p>
                         </a>
@@ -59,26 +59,26 @@
 
 
                     <li>
-                        <a href="/receptionniste">
+                        <a href="{{route('receptionniste')}}">
                             <i class="now-ui-icons files_single-copy-04"></i>
                             <p>Receptionniste</p>
                         </a>
                     </li>
                     <li>
-                        <a href="/dashbord">
+                        <a href="{{route('dashbord')}}">
                             <i class="now-ui-icons  travel_info"></i>
                             <p>Admin</p>
                         </a>
                     </li>
                    <li>
-                    <a href="/">
+                    <a href="{{route('Profile')}}">
                             <i class="now-ui-icons users_single-02"></i>
                             <p>Profile</p>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#lien ">
+                        <a href="{{route('login')}}">
                             <i class="now-ui-icons ui-1_lock-circle-open"></i>
                             <p>Logout</p>
                         </a>

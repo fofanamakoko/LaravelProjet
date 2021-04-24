@@ -1,4 +1,4 @@
-@extends('Layouts.master')
+@extends('Layouts.masterLayout')
 @section('title')
    receptionniste
 @endsection

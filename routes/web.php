@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MasterController;
+use App\Http\Controllers\IndexController;
 
 
 /*
@@ -23,11 +24,22 @@ use App\Http\Controllers\MasterController;
 });*/
 
 
-Route::get('/', [MasterController::class, 'Profile']);
-Route::get('/dashbord', [MasterController::class, 'dashbord']);
-Route::get('/receptionniste', [MasterController::class, 'receptionniste']);
+Route::get('/', [IndexController::class, 'login'])->name('login');
+Route::get('/home', [MasterController::class, 'home'])->name('home');
+Route::get('/register', [IndexController::class, 'register'])->name('register');
+Route::get('/Profile', [MasterController::class, 'Profile'])->name('Profile');;
+Route::get('/dashbord', [MasterController::class, 'dashbord'])->name('dashbord');;
+Route::get('/receptionniste', [MasterController::class, 'receptionniste'])->name('receptionniste');
+Route::post('/registerUser', [IndexController::class, 'registerUser'])->name('registeruser');
 
 /*Route::get('/', function () {
     return view('Adminpage.Profile');
 });*/
+
+
+
+
+
+
+
 
