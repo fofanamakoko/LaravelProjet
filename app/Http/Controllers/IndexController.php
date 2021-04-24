@@ -38,13 +38,14 @@ class IndexController extends Controller
     $user->email=$request->email;
     $user->password=Hash::make($request->password);
     $user->save();
-    return redirect('/');
+return redirect('/');
 
 
 
+// a  enlever
 
-
-
+   // auth()->attempt( $request->only('email', 'password') );
+   // return redirect()->route('registered');
 
 
 
@@ -60,5 +61,6 @@ public function register(){
 public function Adminlogin(){
     return view('Adminlogin');
 }
+
 
 }

@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class Admincontroller extends Controller
 {
 
     public function registered(){
-        return view('registered',['currentpage'=>'registered']);
+
+$users=User::all();
+
+
+        return view('registered',['currentpage'=>'registered'] )->with('users',$users);
     }
 
 

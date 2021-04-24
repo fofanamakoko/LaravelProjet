@@ -32,15 +32,17 @@ AdminLogin page
                 </th>
               </thead>
               <tbody>
+                  @foreach ($users as $row)
+
                 <tr>
                   <td>
-                  leila
+                  {{$row->username}}
                   </td>
                   <td>
-                    leila@gmail.com
+                    {{$row->email}}
                   </td>
                   <td>
-                    employer
+                    {{$row->usertype}}
                   </td>
                   <td>
                    <a href ="0"class ="btn btn-success">EDITE</a>
@@ -49,8 +51,7 @@ AdminLogin page
                    <a href="0"class ="btn btn-danger">DELETE</a>
                   </td>
                 </tr>
-
-
+                @endforeach
               </tbody>
             </table>
           </div>

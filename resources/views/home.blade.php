@@ -5,41 +5,154 @@ Home
 
 @section('content')
 
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="../assets/css/style.css" rel="stylesheet">
-
-<div id="contactwrap">
-    <div class="container">
-
-<div class="wrapper wrapper--w790">
-
-<div class="card card-5">
-    <div class="card-heading">
-        <h2 class="title">Visits of today</h2>
-        <h3 class="title">21/04/2021</h3>
+<div class="card card-5" style="margin-left: 100px; width:1000px;">
+    <div class="card-heading" style="background-color:  #1abc9c;">
+        <h2 class="title" style="color: white; text-shadow: 1px 1px 2px black;">Visit Request Form</h2>
     </div>
     <div class="card-body">
-        <div class="card-body-div">
-            <p id="visite" style="text-align: center;">Visite_152 </p><br>
-            <p>Employé :</p>
-            <p>Visiteur :</p>
-            <p>Heure début :</p>
-            <p>Heure fin :</p>
-            <p id="details"><a href="#">Détails de la visite</a></p>
-        </div>
+        <form method="POST">
+            <div class="form-row">
+                <div class="name">The nature of <br/>the visit</div>
+                <div class="value">
+                    <div class="input-group">
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="subject" style="line-height: 50px; width:340px; height:49.6px; background-color: #e5e5e5; webkit-border-radius: 5px; border-radius: 5px; padding: 0 22px; font-size: 16px; color: #555;">
+                        <option disabled="disabled" selected="selected"></option>
+                        <option style="background-color: white;">Business visit</option>
+                        <option style="background-color: white;">Technical issues visits</option>
+                        <option style="background-color: white;">Consultancy visit</option>
+                    </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="name">Date of arrival</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" id="datepicker" type="text" name="date-arrival" style="width:340px;">
+                    </div>
+                </div>
+            </div>
 
 
-    </div>
+            <div class="form-row m-b-55">
+                <div class="name">Time</div>
+                <div class="value">
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" id="spinner" name="spinner" value="08:30 PM" style="width: 340px;">
+                                <label class="label--desc">Arrival Time</label>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" id="spinner" name="spinner" value="09:30 PM" style="margin-left:-250px; width: 340px;">
+                                <label class="label--desc" style=" margin-left:-250px;">End time</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</div>
+            <div class="form-row">
+                <div class="name">Company or individual</div>
+                <div class="value">
+                    <div class="input-group">
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="subject" style="line-height: 50px; width:340px; height:49.6px; background-color: #e5e5e5; webkit-border-radius: 5px; border-radius: 5px; padding: 0 22px; font-size: 16px; color: #555;">
+                                <option disabled="disabled" selected="selected" ></option>
+                                <option style="background-color: white;" >Company</option>
+                                <option style="background-color: white;">Individual</option>
+                    </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">Company name</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="company" style="width: 340px;">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row m-b-55">
+                <div class="name">Name</div>
+                <div class="value">
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="text" name="first_name" style="width: 340px;">
+                                <label class="label--desc">first name</label>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="text" name="last_name" style="margin-left:-250px; width: 340px;">
+                                <label class="label--desc" style=" margin-left:-250px;">last name</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-
-
+            <div class="form-row">
+                <div class="name">Email</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="email" name="email">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row m-b-55">
+                <div class="name">Phone</div>
+                <div class="value">
+                    <div class="row row-refine">
+                        <div class="col-3">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="text" name="area_code">
+                                <label class="label--desc">Area Code</label>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="input-group-desc">
+                                <input class="input--style-5" type="text" name="phone">
+                                <label class="label--desc">Phone Number</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="name">The persons accompanied</div>
+                <div class="value">
+                    <div class="input-group">
+                        <input class="input--style-5" type="text" name="company">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row p-t-20">
+                <label class="label label--block" style="text-align: left;">Are you an existing customer?</label>
+                <div class="p-t-15">
+                    <label class="radio-container m-r-55" >Yes
+                <input type="radio" checked="checked" name="exist" >
+                <span class="checkmark" ></span>
+            </label>
+                    <label class="radio-container" >No
+                <input type="radio" name="exist">
+                <span class="checkmark"></span>
+            </label>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn--radius-2 btn--red" type="submit" style="background-color: #1abc9c;">Submit</button>
+            </div>
+        </form>
     </div>
 @endsection
 @section('scripts')
