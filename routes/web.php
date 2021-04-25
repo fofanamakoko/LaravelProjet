@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Admincontroller;
+use App\Http\Controllers\VisitController;
 
 
 /*
@@ -37,7 +38,7 @@ Route::get('/registered', [Admincontroller::class, 'registered'])->name('registe
 Route::get('/dashbord1', [Admincontroller::class, 'dashbord1'])->name('dashbord1');
 Route::get('/Adminvisite', [Admincontroller::class, 'Adminvisite'])->name('Adminvisite');
 Route::get('/role-edit/{id}', [Admincontroller::class, 'registeredit'])->name('registeredit');
-
+Route::post('/homeVisit', [VisitController::class, 'homeVisit'])->name('homevisit');
 Route::put('/role-update/{id}', [Admincontroller::class, 'registerupdate'])->name('registerupdate');
 Route::delete('/role_delete/{id}', [Admincontroller::class, 'registerdelete'])->name('registerdelete');
 
