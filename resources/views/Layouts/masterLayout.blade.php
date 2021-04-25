@@ -165,52 +165,14 @@
     <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-    $( function() {
-      $( "#datepicker" ).datepicker();
-    } );
-    </script>
+
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="/resources/demos/external/globalize/globalize.js"></script>
   <script src="/resources/demos/external/globalize/globalize.culture.de-DE.js"></script>
   <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
-  <script>
-  $( function() {
-    $.widget( "ui.timespinner", $.ui.spinner, {
-      options: {
-        // seconds
-        step: 60 * 1000,
-        // hours
-        page: 60
-      },
 
-      _parse: function( value ) {
-        if ( typeof value === "string" ) {
-          // already a timestamp
-          if ( Number( value ) == value ) {
-            return Number( value );
-          }
-          return +Globalize.parseDate( value );
-        }
-        return value;
-      },
-
-      _format: function( value ) {
-        return Globalize.format( new Date(value), "t" );
-      }
-    });
-
-    $( "#spinner" ).timespinner();
-
-    $( "#culture" ).on( "change", function() {
-      var current = $( "#spinner" ).timespinner( "value" );
-      Globalize.culture( $(this).val() );
-      $( "#spinner" ).timespinner( "value", current );
-    });
-  } );
-  </script>
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
     <!-- Chart JS -->

@@ -4,31 +4,24 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Dotenv\Validator;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class IndexController extends Controller
 {
     //
     public function registerUser(Request $request){
 
-    //1 - FORM VALIDATION
-   /* $this->validate($request, [
-        'email' => 'required|email|unique:users',
-        'password' => 'required|confirmed',
-        'firstname' => 'required',
-        'lastname' => 'required'
-    ]);
+        $validated = $request->validate([
+            'firstname' => 'required|max:255',
+            'lastname' => 'required|max:255',
+            'email' => 'required|email',
+            'password' => 'required|min:3'
 
-    User::create([
-        'username' => $request->firstname . " ". $request->lastname,
-        'firstname' => $request->firstname,
-        'lastname' => $request->lastname,
-        'password' => Hash::make($request->password),
-        'email' => $request->email,
-        'userpicture' => 'default.png'
+        ]);
 
-    ]);
-
-    return redirect()->route('login');*/
 
     $user = new User;
     $user->username=$request->firstname." ".$request->lastname;
@@ -38,26 +31,53 @@ class IndexController extends Controller
     $user->email=$request->email;
     $user->password=Hash::make($request->password);
     $user->save();
-return redirect('/');
 
+    return redirect('/registered')->with('status','User add success');
 
-
-// a  enlever
-
-   // auth()->attempt( $request->only('email', 'password') );
-   // return redirect()->route('registered');
 
 
 
 }
+
+//------------------------------------------------------
+
+
+public function checklogin(Request $request){
+
+
+     $validated = $request->validate([
+        'email' => 'required|email',
+        'password' => 'required|min:3'
+
+    ]);
+
+     $user_data = array(
+        'email'  => $request->get('email'),
+        'password' => $request->get('password')
+    );
+
+       if(Auth::attempt($user_data))
+       {
+        return redirect('home');
+       }
+       else
+       {
+        return back()->with('error', 'Wrong Login Details');
+       }
+
+
+
+}
+
+
+
+//----------------------------------------------------
 
 public function login(){
     return view('login');
 }
 
-public function register(){
-    return view('register');
-}
+
 public function Adminlogin(){
     return view('Adminlogin');
 }

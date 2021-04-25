@@ -51,20 +51,27 @@
             <div class="sidebar-wrapper" id="sidebar-wrapper">
                 <ul class="nav">
 
-
-
-                    <li @if ($currentpage == 'registered') class="active" @endif>
-                        <a href="{{ route('registered') }}">
-                            <i class="now-ui-icons users_single-02"></i>
-                            <p>Profile</p>
-                        </a>
-                    </li>
                     <li @if ($currentpage == 'dashbord1') class="active" @endif>
                         <a href="{{ route('dashbord1') }}">
                             <i class="now-ui-icons  travel_info"></i>
                             <p>Dashbord</p>
                         </a>
                     </li>
+
+                    <li @if ($currentpage == 'registered') class="active" @endif>
+                        <a href="{{ route('registered') }}">
+                            <i class="now-ui-icons users_single-02"></i>
+                            <p>Users</p>
+                        </a>
+                    </li>
+
+                    <li @if ($currentpage == 'Adminvisite') class="active" @endif>
+                        <a href="{{ route('Adminvisite') }}">
+                            <i class="now-ui-icons design_app"></i>
+                            <p>Visit-pages</p>
+                        </a>
+                    </li>
+
 
                     <li>
                         <a href="{{ route('Adminlogin') }}">
