@@ -9,7 +9,7 @@ Home
         {{session('status')}}
     </div>
 @endif
-<div class="card card-5" style="margin-left: 100px; width:1000px; margin-top:50px;">
+<div class="card card-5" style="margin-left: 30px; width:95%; margin-top:50px;">
     <div class="card-heading" style="background-color:  #1abc9c;">
         <h2 class="title" style="color: white; text-shadow: 1px 1px 2px black;">Visit Request Form</h2>
 
