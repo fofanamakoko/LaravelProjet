@@ -77,6 +77,17 @@ public function login(){
     return view('login');
 }
 
+public function logout(){
+    auth()->logout();
+    return redirect()->route('login');
+
+}
+public function logout1(){
+    auth()->logout();
+    return redirect()->route('Adminlogin');
+
+}
+
 
 public function Adminlogin(){
     return view('Adminlogin');

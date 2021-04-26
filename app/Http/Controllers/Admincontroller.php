@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Visit;
+use Dotenv\Validator;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -82,6 +84,40 @@ $users=User::all();
         $visits->last_name=$request->input('last_name');
         $visits->update();
         return redirect('/Adminvisite')->with('status','your Data is update');
+
+}
+
+
+public function checkadmin(Request $request){
+
+
+    $validated = $request->validate([
+       'email' => 'required|email',
+       'password' => 'required|min:3'
+
+   ]);
+
+    $admin_data = array(
+       'email'  => $request->get('email'),
+       'password' => $request->get('password'),
+       'usertype'  => $request->get('usertype')
+   );
+
+      if(Auth::attempt($admin_data))
+      {
+          if($admin_data['usertype'] =='admin'){
+              return redirect('dashbord1');
+          }else{
+            return back()->with('error', 'You are not admin');
+          }
+
+      }
+      else
+      {
+       return back()->with('error', 'Wrong Login Details');
+      }
+
+
 
 }
 

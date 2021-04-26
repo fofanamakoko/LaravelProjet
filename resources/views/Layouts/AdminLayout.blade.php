@@ -74,7 +74,7 @@
 
 
                     <li>
-                        <a href="{{ route('Adminlogin') }}">
+                        <a href="{{ route('logout1') }}">
                             <i class="now-ui-icons ui-1_lock-circle-open"></i>
                             <p>Logout</p>
                         </a>

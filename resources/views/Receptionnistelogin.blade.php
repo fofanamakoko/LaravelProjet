@@ -20,7 +20,7 @@ AdminLogin page
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Admin login page!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Receptionniste login page!</h1>
                                     </div>
 
 
@@ -42,7 +42,7 @@ AdminLogin page
                                     </div>
                                 @endif
 
-                                    <form class="user" method="POST" action="{{ route('checkadmin') }}">
+                                    <form class="user" method="POST" action="{{ route('Receptionistelogin') }}">
                                         @csrf
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
@@ -64,8 +64,6 @@ AdminLogin page
                                         </button>
 
                                     </form>
-
-
 
                                 </div>
                             </div>

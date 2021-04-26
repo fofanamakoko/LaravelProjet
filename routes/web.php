@@ -28,14 +28,17 @@ use App\Http\Controllers\VisitController;
 
 
 Route::get('/', [IndexController::class, 'login'])->name('login');
+Route::get('/logout', [IndexController::class, 'logout'])->name('logout');
+Route::get('/logout1', [IndexController::class, 'logout1'])->name('logout1');
 Route::get('/Adminlogin', [IndexController::class, 'Adminlogin'])->name('Adminlogin');
-
+Route::post('/Receptionistelogin', [MasterController::class, 'Receptionistelogin'])->name('Receptionistelogin');
 Route::get('/home', [MasterController::class, 'home'])->name('home');
 
 
-Route::get('/receptionniste', [MasterController::class, 'receptionniste'])->name('receptionniste');
+Route::get('/Receptionniste', [MasterController::class, 'Receptionniste'])->name('Receptionniste');
 Route::post('/registerUser', [IndexController::class, 'registerUser'])->name('registeruser');
 Route::post('/checklogin', [IndexController::class, 'checklogin'])->name('checklogin');
+Route::post('/checkadmin', [Admincontroller::class, 'checkadmin'])->name('checkadmin');
 Route::get('/registered', [Admincontroller::class, 'registered'])->name('registered');
 Route::get('/dashbord1', [Admincontroller::class, 'dashbord1'])->name('dashbord1');
 Route::get('/Adminvisite', [Admincontroller::class, 'Adminvisite'])->name('Adminvisite');
