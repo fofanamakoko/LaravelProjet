@@ -20,16 +20,16 @@
                     <form class="visit" method="POST" action="{{ route('Admindata') }}">
                         @csrf
                         <div class="form-row">
-                            <div class="name">The nature of <br/>the visit</div>
+                            <div class="name">The nature of <br />the visit</div>
                             <div class="value">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <div class="form-group">
-                                            <select name="subject" class="form-control" style="width: 340px;">
-                                                <option disabled="disabled" selected="selected"></option>
-                                                <option>Business visit</option>
-                                                <option>Technical issues visits</option>
-                                                <option>Consultancy visit</option>
-                                            </select>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <div class="form-group">
+                                        <select name="subject" class="form-control" style="width: 340px;">
+                                            <option disabled="disabled" selected="selected"></option>
+                                            <option>Business visit</option>
+                                            <option>Technical issues visits</option>
+                                            <option>Consultancy visit</option>
+                                        </select>
                                         <div class="select-dropdown"></div>
                                     </div>
                                 </div>
@@ -38,9 +38,10 @@
 
                         <div class="form-row">
                             <div class="name">Date of arrival</div>
-                                <div class=form-group >
-                                    <input class="form-control" type="date" name="date_arrival" style="width: 340px; margin-left: 125px; margin-top:-30px;">
-                                </div>
+                            <div class=form-group>
+                                <input class="form-control" type="date" name="date_arrival"
+                                    style="width: 340px; margin-left: 125px; margin-top:-30px;">
+                            </div>
                         </div>
 
                         <div class="form-row m-b-55">
@@ -49,14 +50,17 @@
                                 <div class="row row-space">
                                     <div class="col-2">
                                         <div class="form-group">
-                                            <input class="form-control" type="time" name="time_arival"  style="width: 100px;">
+                                            <input class="form-control" type="time" name="time_arival"
+                                                style="width: 100px;">
                                             <label class="label--desc" style="width: 100px;">Arrival Time</label>
                                         </div>
                                     </div>
                                     <div class="col-2">
                                         <div class="form-group">
-                                            <input class="form-control" type="time" name="end_time" style="margin-left:50px; width: 100px;">
-                                            <label class="label--desc" style="width: 100px; margin-left:100px;">End time</label>
+                                            <input class="form-control" type="time" name="end_time"
+                                                style="margin-left:50px; width: 100px;">
+                                            <label class="label--desc" style="width: 100px; margin-left:100px;">End
+                                                time</label>
                                         </div>
                                     </div>
                                 </div>
@@ -69,8 +73,8 @@
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <div class="form-group">
                                         <select name="company_individual" class="form-control" style="width: 340px;">
-                                            <option disabled="disabled" selected="selected" ></option>
-                                            <option style="background-color: white;" >Company</option>
+                                            <option disabled="disabled" selected="selected"></option>
+                                            <option style="background-color: white;">Company</option>
                                             <option style="background-color: white;">Individual</option>
                                         </select>
                                     </div>
@@ -98,8 +102,10 @@
                                     </div>
                                     <div class="col-2">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" name="last_name" style="margin-left:100px; width: 150px;">
-                                            <label class="label--desc" style=" margin-left:100px; width: 100px;">last name</label>
+                                            <input class="form-control" type="text" name="last_name"
+                                                style="margin-left:100px; width: 150px;">
+                                            <label class="label--desc" style=" margin-left:100px; width: 100px;">last
+                                                name</label>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +132,8 @@
                                     </div>
                                     <div class="col-9">
                                         <div class="form-group">
-                                            <input class="form-control" type="text" name="phone" style="margin-left:45px; width: 218px;">
+                                            <input class="form-control" type="text" name="phone"
+                                                style="margin-left:45px; width: 218px;">
                                             <label class="label--desc" style="margin-left:45px;">Phone Number</label>
                                         </div>
                                     </div>
@@ -142,20 +149,22 @@
                             </div>
                         </div>
                         <div class="form-row p-t-20">
-                            <label class="label label--block" style="text-align: left;">Are you an existing customer?</label>
+                            <label class="label label--block" style="text-align: left;">Are you an existing
+                                customer?</label>
                             <div class="p-t-15">
-                                <label class="radio-container m-r-55" >Yes
-                            <input type="radio" checked="checked" name="exist" >
-                            <span class="checkmark" ></span>
-                        </label>
-                                <label class="radio-container" >No
-                            <input type="radio" name="exist">
-                            <span class="checkmark"></span>
-                        </label>
+                                <label class="radio-container m-r-55">Yes
+                                    <input type="radio" checked="checked" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">No
+                                    <input type="radio" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-success" type="submit" style="background-color: #1abc9c; color: white; text-shadow: 1px 1px 2px black;">Submit</button>
+                            <button class="btn btn-success" type="submit"
+                                style="background-color: #1abc9c; color: white; text-shadow: 1px 1px 2px black;">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -183,10 +192,10 @@
 
                 </div>
                 @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
@@ -194,22 +203,25 @@
                                 <th class="W-10p">
                                     ID
                                 </th>
-                                <th>
-                                    Heure D'ARRIVEE
-                                    <th class="W-10p">
-                                        <th class="W-10p">
-                                   HEURE DE FIN
+                                <th class="W-10p">
+                                    Days
                                 </th>
                                 <th class="W-10p">
-                                    NOM DU VISITEUR
+                                    Arrival Time
                                 </th>
                                 <th class="W-10p">
-                                    NOM DE L'EMPLOYER
+                                    End time
+                                </th>
+                                <th class="W-10p">
+                                    visitor Name
+                                </th>
+                                <th class="W-10p">
+                                    Employer Name
                                 </th>
                                 <th class="W-10p">
                                     EDITE
                                 </th>
-                                <th>
+                                <th class="W-10p">
                                     DELETE
                                 </th>
 
@@ -218,43 +230,48 @@
                                 @foreach ($Visit as $element)
 
 
-                                <tr>
-                                    <td>
-                                        {{ $element->id }}
-                                    </td>
-                                    <td>
-                                        {{ $element->time_arival }}
-                                    <td>
+                                    <tr>
+                                        <td>
+                                            {{ $element->id }}
+                                        </td>
+                                        <td>
+                                            {{ $element->date_arrival }}
+                                        </td>
+                                        <td>
+                                            {{ $element->time_arival }}
+                                        </td>
                                         <td>
                                             {{ $element->end_time }}
+                                        </td>
                                         <td>
                                         {{ $element->first_name . ' ' . $element->last_name }}
-                                    </td>
+                                        </td>
 
-                                    <td>
-                                        {{ $element->persons }}
-                                    </td>
-                                    <td>
-                                        <a href="{{url('about-us/'.$element->id)}}" class="btn btn-success">EDITE</a>
-                                    </td>
-                                    <td>
-                                        <form action="/data_delete/{{ $element->id }}" method="post">
-                                            {{ @csrf_field() }}
-                                            {{ method_field('DELETE') }}
-                                            <button type="submit" class="btn btn-danger">DELETE</button>
-                                        </form>
+                                        <td>
+                                            {{ $element->persons }}
+                                        </td>
+                                        <td>
+                                            <a href="{{ url('about-us/'. $element->id) }}"
+                                                class="btn btn-success">EDITE</a>
+                                        </td>
+                                        <td>
+                                            <form action="/data_delete/{{ $element->id }}" method="post">
+                                                {{ @csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                                <button type="submit" class="btn btn-danger">DELETE</button>
+                                            </form>
                                         </td>
 
                                     </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-
         </div>
+
+    </div>
 
 
 

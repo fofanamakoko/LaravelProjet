@@ -45,11 +45,12 @@ Route::post('/Admindata', [VisitController::class, 'Admindata'])->name('Admindat
 Route::put('/role-update/{id}', [Admincontroller::class, 'registerupdate'])->name('registerupdate');
 Route::delete('/role_delete/{id}', [Admincontroller::class, 'registerdelete'])->name('registerdelete');
 Route::delete('/data_delete/{id}', [Admincontroller::class, 'datadelete'])->name('datadelete');
-
-route::get('/about-us/{id}',[Admincontroller::class,'dataedit'])->name('dataedit');
+route::put('/about-update/{id}',[Admincontroller::class,'dataupdate'])->name('dataupdate');
+Route::get('/about-us/{id}',[Admincontroller::class,'dataedit'])->name('dataedit');
 /*Route::get('/', function () {
     return view('Adminpage.Profile');Adminvisite
 });*/
+
 
 
 

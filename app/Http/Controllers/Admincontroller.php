@@ -36,7 +36,7 @@ $users=User::all();
 
 
         $users=User::find($id);
-        $users->name=$request->input('username');
+        $users->username=$request->input('username');
         $users->usertype=$request->input('usertype');
         $users->update();
         return redirect('/registered')->with('status','your Data is update');
@@ -71,11 +71,20 @@ $users=User::all();
       return view('dataeditpage',['currentpage'=>'dataeditpage'] )->with('visits',$visits);
 
     }
+    public function dataupdate(Request $request, $id){
 
-
+        $visits=Visit::findOrFail($id);
+        $visits->date_arrival=$request->input('date_arrival');
+        $visits->time_arival=$request->input('time_arival');
+        $visits->end_time=$request->input('end_time');
+        $visits->persons=$request->input('persons');
+        $visits->first_name=$request->input('first_name');
+        $visits->last_name=$request->input('last_name');
+        $visits->update();
+        return redirect('/Adminvisite')->with('status','your Data is update');
 
 }
 
-
+}
 
 
