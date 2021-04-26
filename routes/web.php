@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Admincontroller;
+use App\Http\Controllers\ReceptionisteController;
 use App\Http\Controllers\VisitController;
 
 
@@ -31,7 +32,7 @@ Route::get('/Adminlogin', [IndexController::class, 'Adminlogin'])->name('Adminlo
 
 Route::get('/home', [MasterController::class, 'home'])->name('home');
 Route::get('/Profile', [MasterController::class, 'Profile'])->name('Profile');;
-Route::get('/receptionniste', [MasterController::class, 'receptionniste'])->name('receptionniste');
+Route::get('/receptionniste', [ReceptionisteController::class, 'Visit'])->name('receptionniste');
 Route::post('/registerUser', [IndexController::class, 'registerUser'])->name('registeruser');
 Route::post('/checklogin', [IndexController::class, 'checklogin'])->name('checklogin');
 Route::get('/registered', [Admincontroller::class, 'registered'])->name('registered');
