@@ -25,40 +25,41 @@ EDITE register
                 </div>
             @endif
 
-                <form action="" method="POST" >
+                <form action="{{url('about-update/'.$visits->id)}}" method="POST" >
                     {{ @csrf_field()}}
+                    {{ @method_field('PUT')}}
 
 
 
 
                     <div class="form-group">
-                        <label>time</label>
+                        <label>Days</label>
 
                         <input class="form-control" type="date" name="date_arrival" style="width: 340px;" value="{{$visits->name}}">
                       </div>
                       <div class="form-group">
                         <label>Arrival Time</label>
-                        <input class="form-control" type="time" name="time_arival"  style="width: 340px; "value="{{$visits->name}}">
+                        <input class="form-control" type="time" name="time_arival"  style="width: 340px; "value="{{$visits->time_arival}}">
 
                     </div>
                     <div class="form-group">
                         <label>End time</label>
 
-                        <input class="form-control" type="time" name="end_time" style=" width: 340px;"value="{{$visits->name}}">
+                        <input class="form-control" type="time" name="end_time" style=" width: 340px;"value="{{$visits->end_time}}">
 
                     </div>
                     <div class="form-group">
                         <label>Employer Name</label>
-                        <input class="form-control" type="text" name="persons" style="width: 340px;"value="{{$visits->name}}">
+                        <input class="form-control" type="text" name="persons" style="width: 340px;"value="{{$visits->persons}}">
                     </div>
                     <div class="form-group">
                         <label class="label--desc" style="width: 100px;">first name</label>
-                        <input class="form-control" type="text" name="first_name" style="width: 340px;">
+                        <input class="form-control" type="text" name="first_name" style="width: 340px;"value="{{$visits->first_name}}">
 
                     </div>
                     <div class="form-group">
                         <label class="label--desc" style="  width: 100px;">last name</label>
-                        <input class="form-control" type="text" name="last_name" style=" width: 340px;"value="{{$visits->name}}">
+                        <input class="form-control" type="text" name="last_name" style=" width: 340px;"value="{{$visits->last_name}}">
 
                     </div>
 

@@ -61,9 +61,8 @@
                     </li>
 
 
-
- <li @if ( $currentpage =='receptionniste') class="active" @endif>
-                        <a href="{{route('receptionniste')}}">
+                    <li @if ( $currentpage =='receptionniste') class="active" @endif>
+                        <a href="{{route('Receptionniste')}}">
                             <i class="now-ui-icons files_single-copy-04"></i>
                             <p>Receptionniste</p>
                         </a>
@@ -79,7 +78,7 @@
 
 
                     <li>
-                        <a href="{{route('login')}}">
+                        <a href="{{route('logout')}}">
                             <i class="now-ui-icons ui-1_lock-circle-open"></i>
                             <p>Logout</p>
                         </a>

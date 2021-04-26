@@ -33,12 +33,12 @@ EDITE register
                     <div class="form-group">
                         <label>User name</label>
 
-                        <input type="text" class="form-control" value="{{$users->name}}" name="username">
+                        <input type="text" class="form-control" value="{{$users->username}}" name="username">
                       </div>
 
                       <div class="form-group">
                         <label>Give role</label>
-                        <input  type="text" name="usertype" class ="form-control"value="{{$users->name}}">
+                        <input  type="text" name="usertype" class ="form-control"value="{{$users->usertype}}">
                            <!-- <option value="admin">ADMIN</option>
                             <option value="employer">employer</option>
                         </select>-->

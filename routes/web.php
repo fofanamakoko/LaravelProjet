@@ -28,15 +28,18 @@ use App\Http\Controllers\DynamicPDFController;
 
 
 Route::get('/', [IndexController::class, 'login'])->name('login');
+Route::get('/logout', [IndexController::class, 'logout'])->name('logout');
+Route::get('/logout1', [IndexController::class, 'logout1'])->name('logout1');
 Route::get('/Adminlogin', [IndexController::class, 'Adminlogin'])->name('Adminlogin');
-
+Route::post('/Receptionistelogin', [MasterController::class, 'Receptionistelogin'])->name('Receptionistelogin');
 Route::get('/home', [MasterController::class, 'home'])->name('home');
 Route::get('/dynamic_pdf', [DynamicPDFController::class, 'index'])->name('index');
 Route::get('/dynamic_pdf/pdf', [DynamicPDFController::class, 'pdf'])->name('pdf');
 
-Route::get('/receptionniste', [MasterController::class, 'receptionniste'])->name('receptionniste');
+Route::get('/Receptionniste', [MasterController::class, 'Receptionniste'])->name('Receptionniste');
 Route::post('/registerUser', [IndexController::class, 'registerUser'])->name('registeruser');
 Route::post('/checklogin', [IndexController::class, 'checklogin'])->name('checklogin');
+Route::post('/checkadmin', [Admincontroller::class, 'checkadmin'])->name('checkadmin');
 Route::get('/registered', [Admincontroller::class, 'registered'])->name('registered');
 Route::get('/dashbord1', [Admincontroller::class, 'dashbord1'])->name('dashbord1');
 Route::get('/Adminvisite', [Admincontroller::class, 'Adminvisite'])->name('Adminvisite');
@@ -46,11 +49,12 @@ Route::post('/Admindata', [VisitController::class, 'Admindata'])->name('Admindat
 Route::put('/role-update/{id}', [Admincontroller::class, 'registerupdate'])->name('registerupdate');
 Route::delete('/role_delete/{id}', [Admincontroller::class, 'registerdelete'])->name('registerdelete');
 Route::delete('/data_delete/{id}', [Admincontroller::class, 'datadelete'])->name('datadelete');
-
-route::get('/about-us/{id}',[Admincontroller::class,'dataedit'])->name('dataedit');
+route::put('/about-update/{id}',[Admincontroller::class,'dataupdate'])->name('dataupdate');
+Route::get('/about-us/{id}',[Admincontroller::class,'dataedit'])->name('dataedit');
 /*Route::get('/', function () {
     return view('Adminpage.Profile');Adminvisite
 });*/
+
 
 
 
