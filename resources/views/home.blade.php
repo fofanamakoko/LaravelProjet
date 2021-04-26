@@ -11,7 +11,7 @@ Home
 @endif
 <div class="card card-5" style="margin-left: 30px; width:95%; margin-top:50px;">
     <div class="card-heading" style="background-color:  #1abc9c;">
-        <h2 class="title" style="color: white; text-shadow: 1px 1px 2px black;">Visit Request Form</h2>
+        <h2 class="title" style="color: white; text-shadow: 1px 1px 2px black;">Visit Request Form </h2>
 
     </div>
     <div class="card-body">
@@ -58,13 +58,13 @@ Home
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="form-group">
-                                        <input class="form-control" type="time" name="time_arival"  style="width: 340px;">
+                                        <input class="form-control" type="time" name="time_arival"  style="width: 100px;">
                                         <label class="label--desc" style="width: 100px;">Arrival Time</label>
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="form-group">
-                                        <input class="form-control" type="time" name="end_time" style="margin-left:100px; width: 340px;">
+                                        <input class="form-control" type="time" name="end_time" style="margin-left:50px; width: 100px;">
                                         <label class="label--desc" style="width: 100px; margin-left:100px;">End time</label>
                                     </div>
                                 </div>
@@ -101,13 +101,13 @@ Home
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" name="first_name" style="width: 340px;">
+                                        <input class="form-control" type="text" name="first_name" style="width: 150px;">
                                         <label class="label--desc" style="width: 100px;">first name</label>
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" name="last_name" style="margin-left:100px; width: 340px;">
+                                        <input class="form-control" type="text" name="last_name" style="margin-left:100px; width: 150px;">
                                         <label class="label--desc" style=" margin-left:100px; width: 100px;">last name</label>
                                     </div>
                                 </div>

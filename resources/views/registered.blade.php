@@ -74,8 +74,10 @@
 
                 <div class="card-header">
 
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <button type="button" class="btn btn-primary float-right" data-toggle="modal"
                             data-target="#exampleModal">ADD USER</button>
+                    <h4 class="card-title"> USERS PAGE  </h4>
+
 
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

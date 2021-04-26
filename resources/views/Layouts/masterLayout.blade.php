@@ -76,12 +76,7 @@
                         </a>
                     </li>
 
- <li @if ( $currentpage == 'Profile') class="active" @endif>
-                    <a href="{{route('Profile')}}">
-                            <i class="now-ui-icons users_single-02"></i>
-                            <p>Profile</p>
-                        </a>
-                    </li>
+
 
                     <li>
                         <a href="{{route('login')}}">
@@ -114,16 +109,7 @@
                         <span class="navbar-toggler-bar navbar-kebab"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                        <form>
-                            <div class="input-group no-border">
-                                <input type="text" value="" class="form-control" placeholder="Search...">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <i class="now-ui-icons ui-1_zoom-bold"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+
                         <ul class="navbar-nav">
 
                             <li class="nav-item dropdown">

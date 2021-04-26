@@ -48,6 +48,43 @@ class VisitController extends Controller
     $visit->save();
     return redirect('/home')->with('status','The visit is registered successfully!');
     }
+    public function Admindata(Request $request){
+
+        //
+    $validated = $request->validate([
+        'subject' => 'required',
+        'date_arrival' => 'required',
+        //'time_arrival' => 'required',
+        'end_time' => 'required',
+        'company_individual' => 'required',
+        'first_name' => 'required',
+        'company' => 'required',
+        'last_name' => 'required',
+        'email' => 'required|email',
+        //'tel' => 'required',
+        'persons' => 'required',
+        'exist' => 'required'
+
+    ]);
+    $visit = new Visit;
+    $visit->subject=$request->subject;
+    $visit->date_arrival=$request->date_arrival;
+    $visit->time_arival=$request->time_arival;
+    $visit->end_time=$request->end_time;
+    $visit->company_individual=$request->company_individual;
+    $visit->company=$request->company;
+    $visit->first_name=$request->first_name;
+    $visit->last_name=$request->last_name;
+    $visit->email=$request->email;
+    $visit->tel=$request->area_code." ".$request->phone;
+
+    $visit->persons=$request->persons;
+    $visit->exist=$request->exist;
+    $visit->save();
+    return redirect('/Adminvisite')->with('status','The visit is registered successfully!');
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
