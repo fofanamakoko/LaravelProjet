@@ -6,7 +6,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Admincontroller;
 
 use App\Http\Controllers\VisitController;
-
+use App\Http\Controllers\DynamicPDFController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +33,8 @@ Route::get('/logout1', [IndexController::class, 'logout1'])->name('logout1');
 Route::get('/Adminlogin', [IndexController::class, 'Adminlogin'])->name('Adminlogin');
 Route::post('/Receptionistelogin', [MasterController::class, 'Receptionistelogin'])->name('Receptionistelogin');
 Route::get('/home', [MasterController::class, 'home'])->name('home');
-
+Route::get('/dynamic_pdf', [DynamicPDFController::class, 'index'])->name('index');
+Route::get('/dynamic_pdf/pdf', [DynamicPDFController::class, 'pdf'])->name('pdf');
 
 Route::get('/Receptionniste', [MasterController::class, 'Receptionniste'])->name('Receptionniste');
 Route::post('/registerUser', [IndexController::class, 'registerUser'])->name('registeruser');
