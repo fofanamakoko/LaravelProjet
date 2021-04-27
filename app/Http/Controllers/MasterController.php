@@ -49,6 +49,7 @@ class MasterController extends Controller
     }
 
     public function Receptionniste(){
+
         return view('Receptionnistelogin');
     }
 
@@ -59,7 +60,6 @@ class MasterController extends Controller
 
         return view('home',['currentpage'=>'home']);
     }
-
 
 }
 

@@ -3,11 +3,12 @@
 Home
 @endsection
 
-@section('content')
+ @section('content')
+
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="width:900px; margin-left: -160px;>
+            <div class="modal-content" style="width:900px;">
                 <div class="modal-header">
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -128,7 +129,7 @@ Home
                                             <div class="row row-refine">
                                                 <div class="col-3">
                                                     <div class="form-group">
-                                                        <input class="form-control" type="text" name="area_code" style="width: 110px;">
+                                                        <input class="form-control" type="text" name="area_code" style="width: 100px;">
                                                         <label class="label--desc" style="width: 100px;">Area Code</label>
                                                     </div>
                                                 </div>
@@ -177,10 +178,10 @@ Home
         </div>
     </div>
     <div>
-        <button type="button" class="btn btn-primary float-right" data-toggle="modal"
-        data-target="#exampleModal" style="position: absolute; margin-left: 850px; margin-top:50px; background-color:#1abc9c; ">Complete the visit form
-            </button>
+        <button type="button" class="btn b tn-primary float:center" data-toggle="modal"
+        data-target="#exampleModal" style=" margin-left: 500px; margin-top:300px; ">Add visit forn</button>
     </div>
+
 
     @if ($errors->any())
         <div class="alert alert-danger" style="margin-left: 100px; margin-top:50px; width: 700px;">
@@ -189,20 +190,20 @@ Home
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
+
         </div>
     @endif
 
     @if(session('status'))
         <div class="alert alert-success"role="alert" style="margin-top:75px; margin-left: 100px; width: 700px; background-color: #1abc9c;">
             {{session('status')}}
-            <br/>
-            <div>
-                <a href="{{ url('dynamic_pdf/pdf')}}" style="color: #1abc9c; background-color: white">Télécharger</a>
-            </div>
+            <a href="{{ url('dynamic_pdf/pdf')}}" class="btn b tn-primary float:right" role="button" data-bs-toggle="button">Telechager le Badge</a>
         </div>
+
     @endif
 
 
 @endsection
+
 @section('scripts')
 @endsection

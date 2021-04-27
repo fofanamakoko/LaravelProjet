@@ -117,7 +117,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 
-                                    <a class="dropdown-item" href="#lien">Logout</a>
+                                    <a class="dropdown-item" href="{{ route('logout1') }}">Logout</a>
                                 </div>
                             </li>
 
