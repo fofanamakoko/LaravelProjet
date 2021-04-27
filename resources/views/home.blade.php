@@ -7,7 +7,7 @@ Home
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="width:900px;">
+            <div class="modal-content" style="width:900px; margin-left: -160px;>
                 <div class="modal-header">
 
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -18,15 +18,14 @@ Home
 
                 <div class="modal-body">
 
-                <div class="card card-5" style="margin-left: 30px; width:95%; margin-top:50px;">
+                <div class="card card-5" style="margin-left: 30px; width:95%;">
                     <div class="card-heading" style="background-color:  #1abc9c;">
                         <h2 class="title" style="color: white; text-shadow: 1px 1px 2px black;">Visit Request Form </h2>
-
                     </div>
+
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-
                                 <form class="visit" method="POST" action="{{ route('homevisit') }}">
                                     @csrf
                                     <div class="form-row">
@@ -45,7 +44,6 @@ Home
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="form-row">
                                         <div class="name">Date of arrival</div>
                                             <div class=form-group >
@@ -59,14 +57,14 @@ Home
                                             <div class="row row-space">
                                                 <div class="col-2">
                                                     <div class="form-group">
-                                                        <input class="form-control" type="time" name="time_arival"  style="width: 100px;">
+                                                        <input class="form-control" type="time" name="time_arival"  style="width: 155px;">
                                                         <label class="label--desc" style="width: 100px;">Arrival Time</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2">
                                                     <div class="form-group">
-                                                        <input class="form-control" type="time" name="end_time" style="margin-left:50px; width: 100px;">
-                                                        <label class="label--desc" style="width: 100px; margin-left:100px;">End time</label>
+                                                        <input class="form-control" type="time" name="end_time" style="width: 155px;">
+                                                        <label class="label--desc" style="width: 100px;">End time</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,14 +100,14 @@ Home
                                             <div class="row row-space">
                                                 <div class="col-2">
                                                     <div class="form-group">
-                                                        <input class="form-control" type="text" name="first_name" style="width: 150px;">
+                                                        <input class="form-control" type="text" name="first_name" style="width: 155px;">
                                                         <label class="label--desc" style="width: 100px;">first name</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-2">
                                                     <div class="form-group">
-                                                        <input class="form-control" type="text" name="last_name" style="margin-left:100px; width: 150px;">
-                                                        <label class="label--desc" style=" margin-left:100px; width: 100px;">last name</label>
+                                                        <input class="form-control" type="text" name="last_name" style=" width: 155px;">
+                                                        <label class="label--desc" style="width: 100px;">last name</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -130,14 +128,14 @@ Home
                                             <div class="row row-refine">
                                                 <div class="col-3">
                                                     <div class="form-group">
-                                                        <input class="form-control" type="text" name="area_code" style="width: 100px;">
+                                                        <input class="form-control" type="text" name="area_code" style="width: 110px;">
                                                         <label class="label--desc" style="width: 100px;">Area Code</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-9">
                                                     <div class="form-group">
-                                                        <input class="form-control" type="text" name="phone" style="margin-left:45px; width: 218px;">
-                                                        <label class="label--desc" style="margin-left:45px;">Phone Number</label>
+                                                        <input class="form-control" type="text" name="phone" style="margin-left:65px; width: 218px;">
+                                                        <label class="label--desc" style="margin-left:65px; width: 150px;">Phone Number</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,28 +178,29 @@ Home
     </div>
     <div>
         <button type="button" class="btn btn-primary float-right" data-toggle="modal"
-                                    data-target="#exampleModal" style="margin-top:50px;">Complete the visit form</button>
+        data-target="#exampleModal" style="position: absolute; margin-left: 850px; margin-top:50px; background-color:#1abc9c; ">Complete the visit form
+            </button>
     </div>
 
-                                @if ($errors->any())
-                                <div class="alert alert-danger" style="margin-top:50px; width: 700px;">
-                                    <ul>
-                                        @foreach ($errors->all() as $error)
-                                            <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                @endif
+    @if ($errors->any())
+        <div class="alert alert-danger" style="margin-left: 100px; margin-top:50px; width: 700px;">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
-                            @if(session('status'))
-                                <div class="alert alert-success"role="alert" style="margin-top:50px; margin-left: 100px; width: 700px; background-color: #1abc9c;">
-                                    {{session('status')}}
-                                    <div>
-                                        <a href="{{ url('dynamic_pdf/pdf')}}" style="margin-left: 500px; color: white;">Télécharger</a>
-                                        </div>
-                                </div>
-
-                            @endif
+    @if(session('status'))
+        <div class="alert alert-success"role="alert" style="margin-top:75px; margin-left: 100px; width: 700px; background-color: #1abc9c;">
+            {{session('status')}}
+            <br/>
+            <div>
+                <a href="{{ url('dynamic_pdf/pdf')}}" style="color: #1abc9c; background-color: white">Télécharger</a>
+            </div>
+        </div>
+    @endif
 
 
 @endsection
