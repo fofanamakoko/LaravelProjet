@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Visit;
 use Dotenv\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Carbon;
+
 
 
 
@@ -24,7 +26,37 @@ $users=User::all();
 
 
     public function dashbord1(){
-        return view('dashbord1',['currentpage'=>'dashbord1']);
+
+        $date = date_create();
+
+        $visits=Visit::all();
+        $total_visits=Visit::all()->count();
+
+        $total=User::all()->count();
+        $users=User::all();
+
+        $today_visits = Visit::whereDate('created_at', Carbon::today())->get();
+        $today_total_visits = Visit::whereDate('created_at', Carbon::today())->get()->count();
+
+        /*Carbon::setWeekStartsAt(Carbon::MONDAY);
+        Carbon::setWeekEndsAt(Carbon::SUNDAY);
+        $dt=Visit::whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->get();*/
+        $dts = Carbon::now();
+        $dt = Visit::where(Visit::raw("WEEKOFYEAR(created_at)"), $dts->weekOfYear)->get();
+
+        $year = Visit::whereYear('created_at', Carbon::now()->year)
+        ->whereMonth('created_at', Carbon::now()->month)
+        ->get();
+
+
+        return view('dashbord1',['currentpage'=>'dashbord1'])->with('visits',$visits)
+        ->with('total_visits',$total_visits)
+        ->with('users',$users)
+        ->with('today_visits',$today_visits)
+        ->with('today_total_visits',$today_total_visits)
+        ->with('dt',$dt)
+        ->with('year',$year)
+        ->with('total',$total);
     }
 
 
