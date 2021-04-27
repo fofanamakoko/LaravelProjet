@@ -35,7 +35,7 @@ $users=User::all();
         $total=User::all()->count();
         $users=User::all();
 
-        $today_visits = Visit::whereDate('created_at', Carbon::today())->get();
+       $today_visits = Visit::whereDate('created_at', Carbon::today())->get();
         $today_total_visits = Visit::whereDate('created_at', Carbon::today())->get()->count();
 
         /*Carbon::setWeekStartsAt(Carbon::MONDAY);

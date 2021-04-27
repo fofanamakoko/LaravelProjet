@@ -1214,6 +1214,9 @@ input {
     -webkit-box-shadow: 0px 8px 20px 0px rgba(247, 208, 208, 0.15);
     -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    background-image: url("../img/oo.jpg");
+    ;
+    background-size: cover;
 }
 
 .card-5 .card-heading {
@@ -1250,6 +1253,7 @@ input {
     box-shadow: 15px 16px 13px -10px rgba(125, 123, 138, 1);
     margin-top: 50px;
     color: #4a4a4a;
+    background-color: #ffffff;
 }
 
 .card-body-div p {
