@@ -38,15 +38,17 @@ $users=User::all();
        $today_visits = Visit::whereDate('created_at', Carbon::today())->get();
         $today_total_visits = Visit::whereDate('created_at', Carbon::today())->get()->count();
 
-        /*Carbon::setWeekStartsAt(Carbon::MONDAY);
-        Carbon::setWeekEndsAt(Carbon::SUNDAY);
-        $dt=Visit::whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->get();*/
+
         $dts = Carbon::now();
-        $dt = Visit::where(Visit::raw("WEEKOFYEAR(created_at)"), $dts->weekOfYear)->get();
+
 
         $year = Visit::whereYear('created_at', Carbon::now()->year)
         ->whereMonth('created_at', Carbon::now()->month)
         ->get();
+
+        $total_year = Visit::whereYear('created_at', Carbon::now()->year)
+        ->whereMonth('created_at', Carbon::now()->month)
+        ->get()->count();
 
 
         return view('dashbord1',['currentpage'=>'dashbord1'])->with('visits',$visits)
@@ -54,7 +56,7 @@ $users=User::all();
         ->with('users',$users)
         ->with('today_visits',$today_visits)
         ->with('today_total_visits',$today_total_visits)
-        ->with('dt',$dt)
+        ->with('total_year',$total_year)
         ->with('year',$year)
         ->with('total',$total);
     }

@@ -110,11 +110,9 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
 
                         <ul class="navbar-nav">
-
-
-
-                                    <i class="now-ui-icons users_single-02"></i>
-
+                            <div style="width:70px;">
+                                <img src="../assets/img/visitors.png">
+                            </div>
 
 
                             </li>

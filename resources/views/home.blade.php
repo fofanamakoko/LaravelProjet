@@ -178,7 +178,7 @@ Home
     </div>
     <div>
         <button type="button" class="btn b tn-primary float:center" data-toggle="modal"
-        data-target="#exampleModal" style=" margin-left: 500px; margin-top:300px; ">Add visit forn</button>
+        data-target="#exampleModal" style=" margin-left: 500px; margin-top:300px; ">Add Visit Form</button>
     </div>
 
 
